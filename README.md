@@ -1,5 +1,11 @@
 # Multi-Agent LLM Travel Planner (LangGraph + Groq Llama)
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AsserGharib1/MultiAgentTravelPlanner/blob/main/multi_agent_travel_planner.ipynb)
+[![View on nbviewer](https://img.shields.io/badge/view%20full%20notebook-nbviewer-F37626?logo=jupyter&logoColor=white)](https://nbviewer.org/github/AsserGharib1/MultiAgentTravelPlanner/blob/main/multi_agent_travel_planner.ipynb)
+
+> **Viewing tip:** GitHub truncates the inline preview of large notebooks (this one preserves all training outputs). Use the **nbviewer** badge above to read it fully rendered in the browser, or **Colab** to open it interactively.
+
+
 A five-agent LLM system that turns natural-language travel requests into grounded, day-by-day itineraries, built with LangGraph and Groq-hosted Llama models.
 
 ## Architecture
@@ -14,6 +20,16 @@ User query → Query Parser → [Restaurant | Attraction | Accommodation] (paral
 - **Five-metric evaluation harness** (`src/evaluate.py`) including an LLM-as-judge metric.
 - **Fine-tuned MiniLM sentence transformer** for semantic user-preference matching.
 - Hyperparameter experiments (model size, temperature) with results in `results/`.
+
+## Evaluation results
+
+Combined evaluation dashboard across experiments:
+
+![Evaluation dashboard](results/combined_dashboard.png)
+
+Preference-model fine-tuning learning curves:
+
+![Learning curves](results/learning_curves.png)
 
 ## Repository contents
 
