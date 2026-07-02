@@ -22,20 +22,20 @@ This notebook runs the Multi-Agent Travel Planner system using the RealTravel da
 ## 1. Setup & Installation
 """
 
-!pip install -q --upgrade groq httpx
+# [colab] !pip install -q --upgrade groq httpx
 
 # ── Install all required packages ──────────────────────────────────────────
 # Core: LangGraph (agent orchestration), Groq (LLM inference)
-!pip install -q groq langgraph langchain langchain-core
+# [colab] !pip install -q groq langgraph langchain langchain-core
 
 # Data & utilities
-!pip install -q pandas tqdm
+# [colab] !pip install -q pandas tqdm
 
 # Section (a): Transformer fine-tuning with existing word embeddings
-!pip install -q sentence-transformers==2.7.0 transformers==4.40.0 accelerate scikit-learn
+# [colab] !pip install -q sentence-transformers==2.7.0 transformers==4.40.0 accelerate scikit-learn
 
 # Section (c): Learning curves & TensorBoard logging
-!pip install -q tensorboard matplotlib seaborn
+# [colab] !pip install -q tensorboard matplotlib seaborn
 
 import nltk
 nltk.download('punkt', quiet=True)
@@ -677,7 +677,7 @@ plot_combined_results(history_v1, history_v2, CONFIG_V1, CONFIG_V2,
 """## 6. Process Multiple Queries (Full Pipeline)"""
 
 # Run the main pipeline on more samples
-!python -m src.main --model large --temperature 0.0 --samples 10 --split valid
+# [colab] !python -m src.main --model large --temperature 0.0 --samples 10 --split valid
 
 """## 7. Final Results Summary
 
