@@ -1,0 +1,610 @@
+{
+  "config": {
+    "model": "large",
+    "model_name": "llama-3.3-70b-versatile",
+    "temperature": 0.0,
+    "num_samples": 3,
+    "split": "valid",
+    "timestamp": "20260430_215223"
+  },
+  "summary": {
+    "avg_score": 0.942,
+    "num_successful": 3,
+    "total_time_seconds": 107.84
+  },
+  "results": [
+    {
+      "query_idx": 0,
+      "user_id": "101555027339334930973",
+      "origin": "Grand Rapids",
+      "destination": "Atlanta",
+      "days": 3,
+      "budget": 1500,
+      "elapsed_seconds": 33.3,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1500,
+            "estimated_total": 670,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.5,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 3,
+            "dislikes_total": 5,
+            "dislikes_matched": 1
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 0.875
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Grand Rapids",
+          "destination": "Atlanta",
+          "dates": [
+            "2022-03-18",
+            "2022-03-19",
+            "2022-03-20"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Spacious private room close St. Barnabas Hospital",
+            "room_type": "Private room",
+            "price_per_night": 144.0,
+            "total_cost": 432.0
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-18",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local café",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Fernbank Forest",
+                  "details": "Explore the nature preserve"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Nyamminz & Jamminz Jamaican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 11
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Perkerson Park",
+                  "details": "Visit the park for scenic beauty and family-friendly environment"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Meatballerz Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 33
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-19",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local bakery",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Dorothy Chapman Fuqua Conservatory",
+                  "details": "Explore the botanical garden"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Porto Brasil Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 13
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "High Museum of Art",
+                  "details": "Visit the modern art museum"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Unity Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 30
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-20",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local café",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Briarlake Forest Park",
+                  "details": "Explore the hiking area"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "El Mexicano Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 15
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Swan House at Atlanta History Center",
+                  "details": "Visit the historical landmark"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Nino's Italian Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 28
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 432.0,
+            "food_total": 138,
+            "attractions_total": 0,
+            "transportation_total": 0,
+            "miscellaneous_total": 100,
+            "estimated_total": 670,
+            "user_budget": 1500,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 1,
+      "user_id": "101990037966474590683",
+      "origin": "Philadelphia",
+      "destination": "Rochester",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 34.81,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 515,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.8,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 4,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 0.95
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Philadelphia",
+          "destination": "Rochester",
+          "dates": [
+            "2022-03-01",
+            "2022-03-02",
+            "2022-03-03"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Romantic 1 bedroom Part2 Harlem USA",
+            "room_type": "Entire home",
+            "price_per_night": 70.0,
+            "total_cost": 210.0
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-01",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local café",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Highland Park",
+                  "details": "Explore the beautiful trails and scenic views"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Tokyo Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 17
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Quarry Hill Nature Center",
+                  "details": "Discover the well-maintained trails and scenic environment"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Lighthouse Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 18
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-02",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local café",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Mayowood Mansion",
+                  "details": "Experience the rich cultural and historical significance"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Char Broil Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 10
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Genesee Valley Park",
+                  "details": "Enjoy the scenic views and variety of activities"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Youngs Korean Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 28
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-03",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local café",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "George Eastman Museum",
+                  "details": "Explore the historical and cultural experiences"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Browncroft Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 22
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Rochester Riverfront Park",
+                  "details": "Take in the scenic views of the river"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Timothy Patrick's (TP's) Irish Restaurant and Sports Pub",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 24
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 210.0,
+            "food_total": 155,
+            "transportation_total": 100,
+            "attractions_total": 50,
+            "estimated_total": 515,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 2,
+      "user_id": "108246694471293006041",
+      "origin": "Oakland",
+      "destination": "Chicago",
+      "days": 3,
+      "budget": 1700,
+      "elapsed_seconds": 39.73,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1700,
+            "estimated_total": 534.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 1.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 5,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 1.0
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Oakland",
+          "destination": "Chicago",
+          "dates": [
+            "2022-03-26",
+            "2022-03-27",
+            "2022-03-28"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Big bedroom in Astoria, 20 min from Central Park",
+            "room_type": "Private room",
+            "price_per_night": 110.0,
+            "total_cost": 330.0
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-26",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local Cafe",
+                  "cuisine": "American",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "North Park Village Nature Center",
+                  "details": "Explore the nature preserve and hiking trails"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Majani Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 18
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Calder's Flamingo",
+                  "details": "Admire the sculpture and its aesthetic appeal"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Ala Too Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 30
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-27",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local Cafe",
+                  "cuisine": "American",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Annunciation Greek Orthodox Cathedral",
+                  "details": "Explore the cathedral and its historical significance"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "Yassa African Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 19
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Holy Name Cathedral",
+                  "details": "Admire the Gothic Revival architecture and historical preservation"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Real Thai Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 46
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-28",
+              "activities": [
+                {
+                  "time": "08:00",
+                  "type": "breakfast",
+                  "name": "Local Cafe",
+                  "cuisine": "American",
+                  "est_cost": 10
+                },
+                {
+                  "time": "09:30",
+                  "type": "attraction",
+                  "name": "Millennium Monument",
+                  "details": "Explore the monument and its scenic views"
+                },
+                {
+                  "time": "12:30",
+                  "type": "lunch",
+                  "name": "IM Vegan Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 17
+                },
+                {
+                  "time": "14:30",
+                  "type": "attraction",
+                  "name": "Ukrainian National Museum",
+                  "details": "Learn about the cultural significance and aesthetic appeal"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Nhà Hàng Vietnam Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 33
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 330.0,
+            "food_total": 204,
+            "estimated_total": 534.0,
+            "user_budget": 1700,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    }
+  ]
+}

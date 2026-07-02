@@ -1,0 +1,2007 @@
+{
+  "config": {
+    "model": "large",
+    "model_name": "llama-3.3-70b-versatile",
+    "temperature": 0.0,
+    "num_samples": 10,
+    "split": "valid",
+    "timestamp": "20260501_012219"
+  },
+  "summary": {
+    "avg_score": 0.782,
+    "num_successful": 10,
+    "total_time_seconds": 525.27
+  },
+  "results": [
+    {
+      "query_idx": 0,
+      "user_id": "101555027339334930973",
+      "origin": "Grand Rapids",
+      "destination": "Atlanta",
+      "days": 3,
+      "budget": 1500,
+      "elapsed_seconds": 40.62,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1500,
+            "estimated_total": 599.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem to be chosen based on preference scores rather than a clear theme or goal."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences for scenic beauty, tranquility, and diverse activities, but some activities may not fully align with these preferences."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and all activities and accommodations are within the user's budget of $1500."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes a comprehensive itinerary for the 3-day trip, but some details such as transportation costs and travel arrangements are not explicitly mentioned."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but some areas for improvement include more personalized activities and clearer details on transportation and travel arrangements."
+            }
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Grand Rapids",
+          "destination": "Atlanta",
+          "dates": [
+            "2022-03-18",
+            "2022-03-19",
+            "2022-03-20"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Spacious private room close St. Barnabas Hospital",
+            "room_type": "Private room",
+            "price_per_night": 144.0,
+            "total_cost": 432.0,
+            "review_rating": 4.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-18",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Dorothy Chapman Fuqua Conservatory",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Perkerson Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Meatballerz Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 33.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Kilimanjaro Caribbean Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 42.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-19",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Fernbank Forest",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "The Wren's Nest House Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Unity Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 30.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Home grown GA Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 31.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-20",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Pemberton Place",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "CNN Studio Tours",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Nyamminz & Jamminz Jamaican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 11.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Country-Aire Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 20.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 432.0,
+            "food_total": 167.0,
+            "estimated_total": 599.0,
+            "user_budget": 1500,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 1,
+      "user_id": "101990037966474590683",
+      "origin": "Philadelphia",
+      "destination": "Rochester",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 40.59,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 341.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities for each day. However, some activities seem to be chosen based on preference scores rather than a clear understanding of the user's preferences."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences for beautiful trails, scenic views, historical value, child-friendly activities, and educational value. However, it does not fully address the user's dislike for required ladder climbing."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and does not exceed the user's budget of $1100. The accommodation and activities are well-chosen and should be available within the specified dates."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan covers all aspects of the user's trip, including accommodation, daily activities, and dining options. However, it does not provide detailed information about transportation or any additional expenses."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements. However, it could be improved by better addressing the user's preferences and dislikes, and providing more detailed information about the trip."
+            }
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Philadelphia",
+          "destination": "Rochester",
+          "dates": [
+            "2022-03-01",
+            "2022-03-02",
+            "2022-03-03"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Romantic 1 bedroom Part2 Harlem USA",
+            "room_type": "Entire home",
+            "price_per_night": 70.0,
+            "total_cost": 210.0,
+            "review_rating": 5.0,
+            "max_occupancy": 3,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-01",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Quarry Hill Nature Center",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Genesee Valley Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Tokyo Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 17.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Lighthouse Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 18.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-02",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Sandra L. Frankel Nature Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Rotary Gateway Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Greece Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 27.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Jines Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 37.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-03",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Highland Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "High Falls",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Char Broil Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 10.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Browncroft Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 22.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 210.0,
+            "food_total": 131.0,
+            "estimated_total": 341.0,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 2,
+      "user_id": "108246694471293006041",
+      "origin": "Oakland",
+      "destination": "Chicago",
+      "days": 3,
+      "budget": 1700,
+      "elapsed_seconds": 40.59,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1700,
+            "estimated_total": 517.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 0,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem to be chosen based on preference scores rather than a clear theme or goal."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences for scenic views, historical preservation, and cultural significance, but some activities seem to be chosen based on default options rather than a deep understanding of the user's interests."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is well-planned and takes into account the user's budget, accommodation, and travel dates, with all activities and expenses accounted for."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes a comprehensive itinerary for the 3-day trip, with activities and dining options for each day, but some details such as transportation and additional expenses are not explicitly mentioned."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but could benefit from more personalization and attention to detail to make it truly exceptional."
+            }
+          }
+        },
+        "aggregate_score": 0.76
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Oakland",
+          "destination": "Chicago",
+          "dates": [
+            "2022-03-26",
+            "2022-03-27",
+            "2022-03-28"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Big bedroom in Astoria, 20 min from Central Park",
+            "room_type": "Private room",
+            "price_per_night": 110.0,
+            "total_cost": 330.0,
+            "review_rating": 5.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-26",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "The Wrigley Building",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Calder's Flamingo",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Real Thai Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 46.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Ala Too Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 30.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-27",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Annunciation Greek Orthodox Cathedral",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Holy Name Cathedral",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Nhà Hàng Vietnam Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 33.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Bismilahi restaurant is now BULSHO restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 43.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-28",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Shrine of Our Lady of Pompeii",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Church of the Ascension",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "IM Vegan Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 17.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Majani Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 18.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 330.0,
+            "food_total": 187.0,
+            "estimated_total": 517.0,
+            "user_budget": 1700,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 3,
+      "user_id": "112819793452285229876",
+      "origin": "Pittsburgh",
+      "destination": "Chicago",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 40.57,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 508.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem to be chosen based on preference scores rather than a clear theme or goal."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences, but some activities and dining options do not align with the user's stated likes and dislikes."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and all activities and accommodations are within the user's budget."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes all necessary details, such as accommodation, daily itinerary, and estimated costs, but some activities lack detailed descriptions."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but could be improved by better aligning activities and dining options with the user's preferences and likes/dislikes."
+            }
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Pittsburgh",
+          "destination": "Chicago",
+          "dates": [
+            "2022-03-09",
+            "2022-03-10",
+            "2022-03-11"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Big bedroom in Astoria, 20 min from Central Park",
+            "room_type": "Private room",
+            "price_per_night": 110.0,
+            "total_cost": 330.0,
+            "review_rating": 5.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-09",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Nevermore Park :: Home of Flyboy",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "The Art Institute of Chicago",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Papa Charles Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 48.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Viaggio Restaurant Chicago",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 32.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-10",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Chicago Cultural Center",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "McCormick Bridgehouse & Chicago River Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Smakosz Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 12.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Sunshine Restaurant Inc",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 14.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-11",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Design Museum of Chicago",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Cloud Gate",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Guey Lon Restaurant",
+                  "cuisine": "Chinese Cuisine",
+                  "est_cost": 34.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Ann Sather Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 38.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 330.0,
+            "food_total": 178.0,
+            "estimated_total": 508.0,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 4,
+      "user_id": "103436111892970840349",
+      "origin": "Denver",
+      "destination": "El Paso",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 104.05,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 490.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 3,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem unrelated to the destination (e.g., Edgemere Linear Park)"
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to incorporate user preferences, but some activities and dining options do not align with the user's stated likes and dislikes"
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and within the user's budget, with a total cost of $321 for accommodation and estimated daily costs for activities and dining"
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan covers the user's entire trip, including accommodation, daily activities, and dining options, but some details are missing (e.g., transportation costs)"
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but some areas for improvement exist, particularly in terms of personalization and coherence"
+            }
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Denver",
+          "destination": "El Paso",
+          "dates": [
+            "2022-03-23",
+            "2022-03-24",
+            "2022-03-25"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Clean, Cozy, and Spacious Brooklyn Row House",
+            "room_type": "Private room",
+            "price_per_night": 107.0,
+            "total_cost": 321.0,
+            "review_rating": 4.0,
+            "max_occupancy": 1,
+            "reason": "Best match for preferred room type and within budget"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-23",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Newman Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Edgemere Linear Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Ensenada Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 35.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "On The Grill Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 12.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-24",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Marion Manor Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Franklin Mountains State Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "AbraKETOsis Restaurant + Bakery",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 48.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "El Paso Mexican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 17.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-25",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Chuck Heinrich Memorial Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Album Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "I-Land Vybz Jamaican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 27.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Restaurant Las Palmas",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 30.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 321.0,
+            "food_total": 169.0,
+            "estimated_total": 490.0,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 5,
+      "user_id": "101963119718625029374",
+      "origin": "Charlotte",
+      "destination": "Atlanta",
+      "days": 3,
+      "budget": 1300,
+      "elapsed_seconds": 40.58,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1300,
+            "estimated_total": 621.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 0,
+            "dislikes_total": 2,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities for each day. However, some activities seem to be chosen based on preference scores rather than a clear understanding of the user's preferences."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences for cultural value, diverse museums, historical value, unique location, and educational insight. However, it does not fully address the user's dislike for crowded times and underdeveloped facilities."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and includes realistic activities and accommodations within the given budget of $1300."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes a comprehensive itinerary for each day, including activities, accommodations, and dining options. However, it does not provide detailed information about transportation costs or any potential risks or challenges associated with the trip."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and attempts to cater to the user's preferences. However, it could be improved by addressing the user's dislikes and providing more detailed information about the trip."
+            }
+          }
+        },
+        "aggregate_score": 0.76
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Charlotte",
+          "destination": "Atlanta",
+          "dates": [
+            "2022-03-12",
+            "2022-03-13",
+            "2022-03-14"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Spacious private room close St. Barnabas Hospital",
+            "room_type": "Private room",
+            "price_per_night": 144.0,
+            "total_cost": 432.0,
+            "review_rating": 4.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-12",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Hammonds House Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "CNN Studio Tours",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Kilimanjaro Caribbean Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 42.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Fia Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 37.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-13",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Al-Farooq Masjid",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Atlanta Movie Tours, Inc.",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Nicola's Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 25.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Nyamminz & Jamminz Jamaican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 11.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-14",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Time to Escape: The Escape Room Experience (Brookhaven)",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Apex Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Sushi Huku Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 29.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Continent Restaurant & Cigar Lounge",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 45.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 432.0,
+            "food_total": 189.0,
+            "estimated_total": 621.0,
+            "user_budget": 1300,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 6,
+      "user_id": "109135925701978492152",
+      "origin": "Portland",
+      "destination": "Washington DC",
+      "days": 3,
+      "budget": 1500,
+      "elapsed_seconds": 40.58,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1500,
+            "estimated_total": 1421.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities for each day. However, some activities seem to be chosen based on preference scores rather than the user's specific preferences."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to cater to the user's preferences for Chinese Cuisine and American Cuisine, but it also includes Latin American Cuisine options, which were not requested. Additionally, some activities do not align with the user's preferences for Informative, Wildlife diversity, Peaceful ambiance, Beautiful scenery, and Well-maintained grounds."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and does not include any activities that are likely to be restricted or unavailable during the specified dates."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes a comprehensive itinerary for each day, with activities and dining options. However, it does not provide detailed information about transportation costs or any additional expenses that may be incurred during the trip."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and attempts to cater to the user's preferences, but it has some minor issues with personalization and completeness. Overall, it is a good plan that could be improved with further refinement."
+            }
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Portland",
+          "destination": "Washington DC",
+          "dates": [
+            "2022-03-01",
+            "2022-03-02",
+            "2022-03-03"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Massive Master Bedroom in Manhattan Apartment",
+            "room_type": "Private room",
+            "price_per_night": 411.0,
+            "total_cost": 1233.0,
+            "review_rating": 4.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-01",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "President Lincoln's Cottage",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Smithsonian Pollinator Garden",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Dolan Uyghur Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 39.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Huacatay Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 42.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-02",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Washington Monument Grounds",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Ford's Theatre",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "The Monocle Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 13.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Catrachitos Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 24.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-03",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Heurich House Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Tudor Place Historic House & Garden",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Coppi's Organic Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 30.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Judy Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 40.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 1233.0,
+            "food_total": 188.0,
+            "estimated_total": 1421.0,
+            "user_budget": 1500,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 7,
+      "user_id": "115669964609357097944",
+      "origin": "Las Vegas",
+      "destination": "Boston",
+      "days": 3,
+      "budget": 1900,
+      "elapsed_seconds": 40.61,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1900,
+            "estimated_total": 898.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.1,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 5,
+            "dislikes_matched": 1
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem to be chosen based on preference scores rather than a clear theme or narrative."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to incorporate user preferences, but some activities and dining options seem to be chosen based on default or fallback options rather than a deep understanding of the user's interests."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is well-planned and takes into account the user's budget, accommodation, and travel dates."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan includes a comprehensive itinerary, but some details such as transportation and additional expenses are not explicitly mentioned."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but could benefit from more personalization and attention to detail to make it truly exceptional."
+            }
+          }
+        },
+        "aggregate_score": 0.78
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Las Vegas",
+          "destination": "Boston",
+          "dates": [
+            "2022-03-13",
+            "2022-03-14",
+            "2022-03-15"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Private Apartment In the Heart of Chelsea",
+            "room_type": "Entire home",
+            "price_per_night": 253.0,
+            "total_cost": 759.0,
+            "review_rating": 5.0,
+            "max_occupancy": 3,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-13",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Boston National Historical Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "John F. Kennedy Presidential Library and Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Ba Lẹ Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 20.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Blue Nile Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 15.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-14",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Old North Church",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Museum of African American History",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Tora Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 16.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Pho Hoa Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 29.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-15",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "All Saints Way",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "James P. Kelleher Rose Garden",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "New Dong Khanh Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 40.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Phở Lê Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 19.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 759.0,
+            "food_total": 139.0,
+            "estimated_total": 898.0,
+            "user_budget": 1900,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 8,
+      "user_id": "106702810914006292937",
+      "origin": "New York",
+      "destination": "Savannah",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 40.56,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 504.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 0,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities for each day. However, some activities seem unrelated to the user's preferences, suggesting a lack of thorough consideration of their interests."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan attempts to incorporate the user's preferences, but some activities do not align with their stated likes and dislikes. Additionally, the cuisine options do not include Seafood & Organic Cuisine as requested."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and includes realistic activities and accommodations within the user's budget."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan covers the user's entire trip, including accommodations, daily activities, and dining options. However, some details, such as transportation and additional expenses, are not included."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets the user's basic requirements, but lacks thorough personalization and attention to detail in some areas."
+            }
+          }
+        },
+        "aggregate_score": 0.76
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "New York",
+          "destination": "Savannah",
+          "dates": [
+            "2022-03-24",
+            "2022-03-25",
+            "2022-03-26"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Cozy Room in Lower East Side- NYC",
+            "room_type": "Private room",
+            "price_per_night": 94.0,
+            "total_cost": 282.0,
+            "review_rating": 5.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-24",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Savannah Ogeechee Canal Museum and Nature Center",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Montezuma Audubon Center",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Browns Family Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 37.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "El Potrillo Mexican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 46.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-25",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Reynolds Square",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Whitemarsh Preserve",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Seabass Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 22.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Vicks Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 45.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-26",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Savannah Botanical Gardens",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Fort Pulaski National Monument",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Better Than Sex - A Dessert Restaurant Savannah",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 48.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Puerto Rico Restaurant Temporarily closed",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 24.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 282.0,
+            "food_total": 222.0,
+            "estimated_total": 504.0,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 9,
+      "user_id": "101366819185039813460",
+      "origin": "Denver",
+      "destination": "Miami",
+      "days": 3,
+      "budget": 1700,
+      "elapsed_seconds": 40.56,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1700,
+            "estimated_total": 437.0,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 0,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": 0.8,
+          "details": {
+            "coherence": {
+              "score": 4,
+              "reason": "The plan is well-structured and follows a logical sequence of activities, but some activities seem unrelated to the user's preferences (e.g., Lummus Park Historic District, Miami City Cemetery)."
+            },
+            "personalization": {
+              "score": 3,
+              "reason": "The plan incorporates some of the user's preferences, such as scenic views, diverse recreational facilities, and bike-friendly areas, but it does not fully address all of their preferences (e.g., historical elements, accessible and climbable rock)."
+            },
+            "feasibility": {
+              "score": 5,
+              "reason": "The plan is feasible and does not contain any unrealistic or unachievable activities."
+            },
+            "completeness": {
+              "score": 4,
+              "reason": "The plan covers all aspects of the trip, including accommodation, daily itinerary, and budget, but some details, such as transportation and additional expenses, are not fully addressed."
+            },
+            "overall": {
+              "score": 4,
+              "reason": "The plan is well-structured and meets most of the user's requirements, but it could be improved by better addressing their preferences and providing more comprehensive information."
+            }
+          }
+        },
+        "aggregate_score": 0.76
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Denver",
+          "destination": "Miami",
+          "dates": [
+            "2022-03-23",
+            "2022-03-24",
+            "2022-03-25"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Cozy Two-bedroom Apt in a Cute House in Brooklyn!",
+            "room_type": "Private room",
+            "price_per_night": 99.0,
+            "total_cost": 297.0,
+            "review_rating": 4.0,
+            "max_occupancy": 1,
+            "reason": "Best rated option (LLM fallback)"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-23",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Shark Valley Tram Tours",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Bayfront Park",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Camel Hump Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 13.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "The Flybridge Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 25.0
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-24",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Paseo en barco",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Patricia & Phillip Frost Art Museum",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "China Ocean Chinese Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 24.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Iberico Spanish Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 28.0
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-25",
+              "activities": [
+                {
+                  "time": "10:00",
+                  "type": "attraction",
+                  "name": "Lummus Park Historic District",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Miami City Cemetery",
+                  "details": "Selected by preference score (LLM fallback)"
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Golden Dragon Restaurant",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 10.0
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "LA LIBERTAD RESTAURANT",
+                  "cuisine": "American Cuisine",
+                  "est_cost": 40.0
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 297.0,
+            "food_total": 140.0,
+            "estimated_total": 437.0,
+            "user_budget": 1700,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "small_temp0.0": {
+    "config": {
+      "model_key": "small",
+      "model_name": "llama-3.1-8b-instant",
+      "temperature": 0.0,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.84,
+      "avg_time_seconds": 35.49,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "Grand Rapids",
+        "destination": "Atlanta",
+        "elapsed_seconds": 11.64,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 30.85,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 45.03,
+        "aggregate_score": 0.85,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 44.02,
+        "aggregate_score": 0.95,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 45.91,
+        "aggregate_score": 0.8,
+        "errors": []
+      }
+    ]
+  },
+  "small_temp0.3": {
+    "config": {
+      "model_key": "small",
+      "model_name": "llama-3.1-8b-instant",
+      "temperature": 0.3,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.522,
+      "avg_time_seconds": 45.27,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "",
+        "destination": "",
+        "elapsed_seconds": 46.35,
+        "aggregate_score": 0.0,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 32.22,
+        "aggregate_score": 0.312,
+        "errors": [
+          "PlannerAgent: 'list' object has no attribute 'get'"
+        ]
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 50.93,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 50.93,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 45.92,
+        "aggregate_score": 0.8,
+        "errors": []
+      }
+    ]
+  },
+  "small_temp0.7": {
+    "config": {
+      "model_key": "small",
+      "model_name": "llama-3.1-8b-instant",
+      "temperature": 0.7,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.86,
+      "avg_time_seconds": 48.58,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "Grand Rapids",
+        "destination": "Atlanta",
+        "elapsed_seconds": 47.2,
+        "aggregate_score": 0.9,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 50.1,
+        "aggregate_score": 0.9,
+        "errors": []
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 46.06,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 52.32,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 47.2,
+        "aggregate_score": 0.95,
+        "errors": []
+      }
+    ]
+  },
+  "large_temp0.0": {
+    "config": {
+      "model_key": "large",
+      "model_name": "llama-3.3-70b-versatile",
+      "temperature": 0.0,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.815,
+      "avg_time_seconds": 34.19,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "Grand Rapids",
+        "destination": "Atlanta",
+        "elapsed_seconds": 12.89,
+        "aggregate_score": 0.825,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 36.33,
+        "aggregate_score": 0.9,
+        "errors": []
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.58,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.59,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 40.57,
+        "aggregate_score": 0.8,
+        "errors": []
+      }
+    ]
+  },
+  "large_temp0.3": {
+    "config": {
+      "model_key": "large",
+      "model_name": "llama-3.3-70b-versatile",
+      "temperature": 0.3,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.79,
+      "avg_time_seconds": 48.8,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "Grand Rapids",
+        "destination": "Atlanta",
+        "elapsed_seconds": 40.63,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 40.57,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.58,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.57,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 81.66,
+        "aggregate_score": 0.8,
+        "errors": []
+      }
+    ]
+  },
+  "large_temp0.7": {
+    "config": {
+      "model_key": "large",
+      "model_name": "llama-3.3-70b-versatile",
+      "temperature": 0.7,
+      "num_samples": 5
+    },
+    "aggregate": {
+      "avg_score": 0.79,
+      "avg_time_seconds": 40.57,
+      "num_successful": 5,
+      "num_failed": 0
+    },
+    "per_query_summary": [
+      {
+        "query_idx": 0,
+        "origin": "Grand Rapids",
+        "destination": "Atlanta",
+        "elapsed_seconds": 40.57,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 1,
+        "origin": "Philadelphia",
+        "destination": "Rochester",
+        "elapsed_seconds": 40.57,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 2,
+        "origin": "Oakland",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.58,
+        "aggregate_score": 0.75,
+        "errors": []
+      },
+      {
+        "query_idx": 3,
+        "origin": "Pittsburgh",
+        "destination": "Chicago",
+        "elapsed_seconds": 40.56,
+        "aggregate_score": 0.8,
+        "errors": []
+      },
+      {
+        "query_idx": 4,
+        "origin": "Denver",
+        "destination": "El Paso",
+        "elapsed_seconds": 40.56,
+        "aggregate_score": 0.8,
+        "errors": []
+      }
+    ]
+  }
+}

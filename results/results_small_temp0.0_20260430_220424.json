@@ -1,0 +1,555 @@
+{
+  "config": {
+    "model": "small",
+    "model_name": "llama-3.1-8b-instant",
+    "temperature": 0.0,
+    "num_samples": 3,
+    "split": "valid",
+    "timestamp": "20260430_220424"
+  },
+  "summary": {
+    "avg_score": 0.783,
+    "num_successful": 3,
+    "total_time_seconds": 709.1
+  },
+  "results": [
+    {
+      "query_idx": 0,
+      "user_id": "101555027339334930973",
+      "origin": "Grand Rapids",
+      "destination": "Atlanta",
+      "days": 3,
+      "budget": 1500,
+      "elapsed_seconds": 197.88,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1500,
+            "estimated_total": 528,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 5,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Grand Rapids",
+          "destination": "Atlanta",
+          "dates": [
+            "2022-03-18",
+            "2022-03-19",
+            "2022-03-20"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Spacious private room close St. Barnabas Hospital",
+            "room_type": "Private room",
+            "price_per_night": 144,
+            "total_cost": 432,
+            "review_rating": 4,
+            "max_occupancy": 1,
+            "reason": "Best match for private room type and within budget"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-18",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Pemberton Place",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Nyamminz & Jamminz Jamaican Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 11
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Time to Escape: The Escape Room Experience (Brookhaven)",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Meatballerz Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 33
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-19",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Grant Park",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Country-Aire Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 20
+                },
+                {
+                  "time": "14:00",
+                  "type": "free time",
+                  "name": "Free time to explore the city",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Unity Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 30
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-20",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Grant Park",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Home grown GA Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 31
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "Pemberton Place",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Kilimanjaro Caribbean Restaurant",
+                  "cuisine": "Latin American Cuisine",
+                  "est_cost": 42
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 432,
+            "food_total": 96,
+            "estimated_total": 528,
+            "user_budget": 1500,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 1,
+      "user_id": "101990037966474590683",
+      "origin": "Philadelphia",
+      "destination": "Rochester",
+      "days": 3,
+      "budget": 1100,
+      "elapsed_seconds": 164.66,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1100,
+            "estimated_total": 296,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.2,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 1,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 0.8
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Philadelphia",
+          "destination": "Rochester",
+          "dates": [
+            "2022-03-01",
+            "2022-03-02",
+            "2022-03-03"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Romantic 1 bedroom Part2 Harlem USA",
+            "room_type": "Entire home",
+            "price_per_night": 70,
+            "total_cost": 210,
+            "review_rating": 5,
+            "max_occupancy": 3,
+            "reason": "Best match for entire home type within budget"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-01",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Buckland Park",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Tokyo Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 17
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "TreeRunner Rochester Adventure Park at Oakland University",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Lighthouse Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 18
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-02",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Rochester Community Park",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Char Broil Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 10
+                },
+                {
+                  "time": "14:00",
+                  "type": "free time",
+                  "name": "Free time to explore Rochester",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Browncroft Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 22
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-03",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Rochester Museum & Science Center",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Tokyo Japanese Restaurant",
+                  "cuisine": "Eastern Asian Cuisine",
+                  "est_cost": 17
+                },
+                {
+                  "time": "14:00",
+                  "type": "free time",
+                  "name": "Free time to explore Rochester",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Lighthouse Family Restaurant",
+                  "cuisine": "European Cuisine",
+                  "est_cost": 18
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 210,
+            "food_total": 86,
+            "estimated_total": 296,
+            "user_budget": 1100,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "query_idx": 2,
+      "user_id": "108246694471293006041",
+      "origin": "Oakland",
+      "destination": "Chicago",
+      "days": 3,
+      "budget": 1700,
+      "elapsed_seconds": 346.57,
+      "evaluation": {
+        "budget_feasibility": {
+          "score": 1.0,
+          "details": {
+            "user_budget": 1700,
+            "estimated_total": 478,
+            "within_budget": true
+          }
+        },
+        "constraint_satisfaction": {
+          "score": 1.0,
+          "details": {
+            "destination": true,
+            "days": true,
+            "cuisine": true,
+            "room_type": true
+          }
+        },
+        "preference_alignment": {
+          "score": 0.0,
+          "details": {
+            "likes_total": 5,
+            "likes_matched": 0,
+            "dislikes_total": 1,
+            "dislikes_matched": 0
+          }
+        },
+        "plan_completeness": {
+          "score": 1.0,
+          "details": {
+            "has_accommodation": true,
+            "correct_days": true,
+            "all_days_have_activities": true,
+            "has_budget_summary": true
+          }
+        },
+        "llm_judge": {
+          "score": null,
+          "details": {
+            "skipped": true
+          }
+        },
+        "aggregate_score": 0.75
+      },
+      "plan": {
+        "travel_plan": {
+          "origin": "Oakland",
+          "destination": "Chicago",
+          "dates": [
+            "2022-03-26",
+            "2022-03-27",
+            "2022-03-28"
+          ],
+          "people": 1,
+          "accommodation": {
+            "name": "Big bedroom in Astoria",
+            "room_type": "Private room",
+            "price_per_night": 110,
+            "total_cost": 330,
+            "review_rating": 5,
+            "max_occupancy": 1,
+            "reason": "Best match for budget, room type, and review rating"
+          },
+          "daily_itinerary": [
+            {
+              "day": 1,
+              "date": "2022-03-26",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Ukrainian National Museum",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Ala Too Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 30
+                },
+                {
+                  "time": "14:00",
+                  "type": "attraction",
+                  "name": "St. John Cantius Church",
+                  "details": "..."
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Real Thai Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 46
+                }
+              ]
+            },
+            {
+              "day": 2,
+              "date": "2022-03-27",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Leather Archives and Museum",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "IM Vegan Restaurant",
+                  "cuisine": "Seafood & Organic Cuisine",
+                  "est_cost": 17
+                },
+                {
+                  "time": "14:00",
+                  "type": "free time",
+                  "name": "Free time to explore the city"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Nhà Hương Vietnam Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 33
+                }
+              ]
+            },
+            {
+              "day": 3,
+              "date": "2022-03-28",
+              "activities": [
+                {
+                  "time": "09:00",
+                  "type": "attraction",
+                  "name": "Majani Restaurant",
+                  "details": "..."
+                },
+                {
+                  "time": "12:00",
+                  "type": "lunch",
+                  "name": "Bismilahi restaurant is now BULSHO restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 43
+                },
+                {
+                  "time": "14:00",
+                  "type": "free time",
+                  "name": "Free time to explore the city"
+                },
+                {
+                  "time": "19:00",
+                  "type": "dinner",
+                  "name": "Ala Too Restaurant",
+                  "cuisine": "African & Middle Eastern Cuisine",
+                  "est_cost": 30
+                }
+              ]
+            }
+          ],
+          "budget_summary": {
+            "accommodation_total": 330,
+            "food_total": 148,
+            "estimated_total": 478,
+            "user_budget": 1700,
+            "within_budget": true
+          }
+        }
+      },
+      "errors": []
+    }
+  ]
+}
