@@ -11,7 +11,7 @@ A five-agent LLM system that turns a natural-language travel request (origin, de
 User query → Query Parser → [ Restaurant | Attraction | Accommodation ] (parallel search) → Planner → Itinerary
 ```
 
-- Five cooperating agents orchestrated as a LangGraph state graph (`src/graph.py`, `src/agents/`).
+- Five cooperating agents orchestrated as a LangGraph state graph (`src/graph.py`, `src/agents/`). The shared `errors` key uses an `operator.add` reducer so the three parallel search branches can append errors safely, and a conditional edge aborts the run early if query parsing yields no usable constraints.
 - **Groq-hosted Llama 3.3 70B and 3.1 8B** with rate-limit back-off, retries, and fallback JSON parsing: engineered to stay under the free-tier 6,000 TPM limit.
 - Recommendations grounded on **15,734 restaurants** and 9,000+ attractions plus accommodations from the RealTravel database.
 
@@ -44,7 +44,7 @@ Plus hyperparameter experiments (model size × temperature) in `results/`, and a
 
 ```bash
 pip install -r requirements.txt
-export GROQ_API_KEY="your_key"   # free at console.groq.com
+export GROQ_API_KEY="your_key"   # free at console.groq.com (or copy .env.example to .env)
 ```
 
 ## Data attribution

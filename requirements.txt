@@ -1,11 +1,13 @@
-langgraph
-groq
-sentence-transformers
-torch
-pandas
-numpy
-scikit-learn
-nltk
-matplotlib
-seaborn
-tqdm
+# Version ranges match the APIs used in this project (developed 2025-2026).
+# Lower bounds are required, upper caps guard against breaking major releases.
+langgraph>=0.2,<2
+groq>=0.9
+sentence-transformers>=2.7
+torch>=2.2,<3
+pandas>=2.0,<3
+numpy>=1.26,<3
+scikit-learn>=1.3,<2
+nltk>=3.8,<4
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+tqdm>=4.66

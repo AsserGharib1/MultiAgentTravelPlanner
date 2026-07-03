@@ -6,6 +6,8 @@ Defines the state graph that orchestrates all agents:
 """
 
 import json
+import operator
+import operator
 from typing import Dict, List, Any, TypedDict, Annotated
 from langgraph.graph import StateGraph, END
 
@@ -28,7 +30,7 @@ class TravelPlannerState(TypedDict):
     accommodation_result: Dict  # Output from accommodation agent
     attraction_result: Dict     # Output from attraction agent
     travel_plan: Dict           # Final compiled plan
-    errors: List[str]           # Any errors during execution
+    errors: Annotated[List[str], operator.add]  # errors from any node, reducer lets parallel branches append safely
 
 
 # ──────────────────────────────────────────────────────────────
@@ -43,7 +45,7 @@ def parse_query_node(state: TravelPlannerState, agents: Dict) -> Dict:
         constraints = parser.parse(state["query_record"], use_llm=False)
         return {"constraints": constraints}
     except Exception as e:
-        return {"constraints": {}, "errors": state.get("errors", []) + [f"QueryParser: {e}"]}
+        return {"constraints": {}, "errors": [f"QueryParser: {e}"]}
 
 
 def search_restaurants_node(state: TravelPlannerState, agents: Dict) -> Dict:
@@ -56,7 +58,7 @@ def search_restaurants_node(state: TravelPlannerState, agents: Dict) -> Dict:
     except Exception as e:
         return {
             "restaurant_result": {"selected_restaurants": [], "total_estimated_food_cost": 0},
-            "errors": state.get("errors", []) + [f"RestaurantAgent: {e}"],
+            "errors": [f"RestaurantAgent: {e}"],
         }
 
 
@@ -70,7 +72,7 @@ def search_accommodations_node(state: TravelPlannerState, agents: Dict) -> Dict:
     except Exception as e:
         return {
             "accommodation_result": {"selected_accommodation": {}},
-            "errors": state.get("errors", []) + [f"AccommodationAgent: {e}"],
+            "errors": [f"AccommodationAgent: {e}"],
         }
 
 
@@ -84,7 +86,7 @@ def search_attractions_node(state: TravelPlannerState, agents: Dict) -> Dict:
     except Exception as e:
         return {
             "attraction_result": {"selected_attractions": []},
-            "errors": state.get("errors", []) + [f"AttractionAgent: {e}"],
+            "errors": [f"AttractionAgent: {e}"],
         }
 
 
@@ -103,7 +105,7 @@ def plan_itinerary_node(state: TravelPlannerState, agents: Dict) -> Dict:
     except Exception as e:
         return {
             "travel_plan": {},
-            "errors": state.get("errors", []) + [f"PlannerAgent: {e}"],
+            "errors": [f"PlannerAgent: {e}"],
         }
 
 
@@ -155,10 +157,15 @@ def build_travel_planner_graph(
     # Define edges
     workflow.set_entry_point("parse_query")
 
-    # After parsing, run all three search agents
-    workflow.add_edge("parse_query", "search_restaurants")
-    workflow.add_edge("parse_query", "search_accommodations")
-    workflow.add_edge("parse_query", "search_attractions")
+    # After parsing, fan out to the three search agents, but only when
+    # parsing produced usable constraints. If the parser failed we stop
+    # early instead of searching with empty constraints.
+    def route_after_parse(state: TravelPlannerState):
+        if state.get("constraints"):
+            return ["search_restaurants", "search_accommodations", "search_attractions"]
+        return END
+
+    workflow.add_conditional_edges("parse_query", route_after_parse)
 
     # After all searches complete, plan the itinerary
     workflow.add_edge("search_restaurants", "plan_itinerary")
