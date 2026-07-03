@@ -23,8 +23,8 @@ User query → Query Parser → [ Restaurant | Attraction | Accommodation ] (par
 | Constraint satisfaction (destination, days, cuisine, room type) | Rule-based | 1.000 |
 | Preference alignment | Jaccard on likes/dislikes | 0.20 to 0.60 |
 | Plan completeness | Rule-based (4 checks) | 1.000 |
-| LLM-as-judge (relevance, quality, budget, preferences) | Llama, 1 to 5 scale | n/a |
-| **Aggregate** | | **0.80 to 0.90** |
+| LLM-as-judge (relevance, quality, budget, preferences) | Llama, 1 to 5 scale | 0.80 (4/5 on every evaluated run) |
+| **Aggregate** | | **0.76 to 1.00** across the runs in `results/` |
 
 Plus hyperparameter experiments (model size × temperature) in `results/`, and a **fine-tuned MiniLM sentence transformer** for semantic preference matching.
 
